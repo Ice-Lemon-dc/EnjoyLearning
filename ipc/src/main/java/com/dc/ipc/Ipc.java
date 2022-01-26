@@ -48,6 +48,10 @@ public class Ipc {
         Channel.getInstance().bind(context, packageName, service);
     }
 
+    public static void disConnect(Context context, Class<? extends IpcService> service) {
+        Channel.getInstance().unbind(context.getApplicationContext(), service);
+    }
+
     public static <T> T getInstance(Class<? extends IpcService> service, Class<T> instanceClass, Object... parameters) {
         return getInstanceWithName(service, instanceClass, "getInstance", parameters);
     }
