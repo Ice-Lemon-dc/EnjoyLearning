@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnjoyLearning">
         <activity
+            android:name=".ipc.IpcActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customview.CustomViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,6 +24,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".ipc.GpsService"
+            android:exported="true"
+            android:process=":gps"/>
+
+        <service android:name="com.dc.ipc.IpcService$IpcService0"
+            android:process=":gps"
+            android:exported="true" />
     </application>
 
 </manifest>

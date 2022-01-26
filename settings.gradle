@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "EnjoyLearning"
 include ':app'
+include ':ipc'
